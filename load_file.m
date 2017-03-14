@@ -1,0 +1,13 @@
+function data = load_file(filepath)
+  data = struct('crosshead_position', [], ...
+  'load', [], ...
+  'extensometer_position', [], ...
+  'filepath', filepath ...
+  );
+
+  raw_data = load(filepath);
+  data.crosshead_position    = raw_data(:, 1);
+  data.load                  = raw_data(:, 2);
+  data.extensometer_position = raw_data(:, 3);
+  return
+end
