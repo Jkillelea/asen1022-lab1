@@ -9,10 +9,10 @@ function data = load_file(filepath)
   % Killelea, Jacob
   % Hanson, Sean
 
-  % There are two files in this program:
-  % main.m -> handles analyzing all the data
-  % load_file.m -> this one, loads data from a specified filename
-  % by default, this program looks for files in the same directory as the code using the regexp 'test*'
+  % There are three files in this program:
+  % main.m      -> this one, handles analyzing all the data
+  % load_file.m -> loads data from a specified filename
+  % escape.m    -> used to ensure proper formatting in plot titles
 
   data = struct('crosshead_position', [], ...
   'load', [], ...

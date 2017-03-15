@@ -8,9 +8,10 @@
 % Killelea, Jacob
 % Hanson, Sean
 
-% There are two files in this program:
+% There are three files in this program:
 % main.m      -> this one, handles analyzing all the data
 % load_file.m -> loads data from a specified filename
+% escape.m    -> used to ensure proper formatting in plot titles
 % by default, this program looks for files in the same directory as the code using the regexp 'test*'
 
 % This lab asked several different questions about the data. I've answered them below

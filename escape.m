@@ -9,7 +9,7 @@ function out = escape(in_str)
   % Killelea, Jacob
   % Hanson, Sean
 
-  % There are two files in this program:
+  % There are three files in this program:
   % main.m      -> handles analyzing all the data
   % load_file.m -> loads data from a specified filename
   % escape.m    -> used to ensure proper formatting in plot titles% prepends any char from the escape_symbols string with a '\' so it displays properly in a plot title
