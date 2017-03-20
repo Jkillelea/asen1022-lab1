@@ -64,8 +64,7 @@ for i = 1:length(data_sets)
   stress = load ./ area; % [psi]
   strain = position / 1;   % initially the grips on the extensometer are exactly 1 inch apart. Devide by 1 for delta-L / L
 
-  % zero both stress and strain to remove any offset
-  stress = stress - stress(1);
+  % zero strain to remove any offset
   strain = strain - strain(1);
 
   % use polyfit to find the slope the line, only bothering with first 50 points (in linear region)
