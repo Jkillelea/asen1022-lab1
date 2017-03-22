@@ -62,7 +62,7 @@ for i = 1:length(data_sets)
   area = (0.5)*(0.25); % [in^2].
 
   stress = load ./ area; % [psi]
-  strain = position / 1;   % initially the grips on the extensometer are exactly 1 inch apart. Devide by 1 for delta-L / L
+  strain = position ./ 1;   % initially the grips on the extensometer are exactly 1 inch apart. Devide by 1 for delta-L / L
 
   % zero strain to remove any offset
   strain = strain - strain(1);
@@ -77,9 +77,9 @@ for i = 1:length(data_sets)
   [ultimate_stress, idx] = max(stress);
   ultimate_strain        = strain(idx);
   % find yield stress by minimum difference between shifted line and data
-  diff     = abs(stress - line(strain - 0.2/100)); % shifted by 0.2%
-  [~, idx] = min(diff);
-  YS       = stress(idx);
+  diff         = abs(stress - line(strain - 0.2/100)); % shifted by 0.2%
+  [~, idx]     = min(diff);
+  YS           = stress(idx);
   yield_strain = strain(idx);
 
   % get fracture stress by looking for where the stress drops by more than 50%
@@ -116,6 +116,9 @@ for i = 1:length(data_sets)
                       'YS', YS ...
                     );
 end
+
+% print out plot
+print('graph.png', '-dpng');
 
 % print results
 % open file
