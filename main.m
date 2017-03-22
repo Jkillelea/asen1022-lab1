@@ -118,10 +118,21 @@ for i = 1:length(data_sets)
 end
 
 % print results
+% open file
+fid = fopen('output.txt', 'w');
 for i = 1:length(results)
   fprintf('%s | ', results(i).name);
   fprintf('E: %8.0f psi| ', results(i).E);
   fprintf('Ultimate Stress: %.0f psi| ', results(i).ultimate_stress);
   fprintf('YS: %.0f psi| ', results(i).YS);
   fprintf('Fracture Stress: %.0f psi\n', results(i).fracture_stress);
+
+  % print to file
+  fprintf(fid, '%s | ', results(i).name);
+  fprintf(fid, 'E: %8.0f psi| ', results(i).E);
+  fprintf(fid, 'Ultimate Stress: %.0f psi| ', results(i).ultimate_stress);
+  fprintf(fid, 'YS: %.0f psi| ', results(i).YS);
+  fprintf(fid, 'Fracture Stress: %.0f psi\n', results(i).fracture_stress);
 end
+% close file
+fclose(fid);

@@ -1,0 +1,2 @@
+test1_sample_c_group 6 | E: 11013328 psi| Ultimate Stress: 22278 psi| YS: 20108 psi| Fracture Stress: 21916 psi
+test2_sample_e_Group_6 | E:  8977577 psi| Ultimate Stress: 22760 psi| YS: 20560 psi| Fracture Stress: 15775 psi
