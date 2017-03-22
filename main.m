@@ -84,7 +84,7 @@ for i = 1:length(data_sets)
 
   % get fracture stress by looking for where the stress drops by more than 50%
   j = 1;
-  while stress(j+1) > 0.5 * stress(j)
+  while 0.5*stress(j) < stress(j+1)
     fracture_strain = strain(j);
     fracture_stress = stress(j);
     j = j + 1;
